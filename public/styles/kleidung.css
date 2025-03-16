@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+main {
+    padding-top: 4rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin: 2rem 0;
+    width: 82rem;
+    justify-content: center;
+    position: sticky;
+}
+
+.product-info {
+    width: 28.75rem;
+    position: fixed;
+    top: 4.5rem;
+    right: 5rem;
+}
+
+.product-image {
+    margin-top: 2rem;
+
+margin-right: 10rem;
+    width: 60%;
+}
+
+.product-image img {
+    width: 18.75rem;
+    height: 18.75rem;
+    margin: 0.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.product-image img:first-child {
+    width: 70%;
+    height: auto;
+    margin-top: 1.25rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    margin-bottom: 1rem;
+}
+
+#add-to-cart-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form select {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+}
+
+#Hinzufügen {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #363636;
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+}
+
+#Hinzufügen:focus {
+    outline: none;
+}
+
+#Hinzufügen:hover {
+    background-color: #FFD700;
+    cursor: pointer;
+}
+
+.product-details {
+    margin-top: 2rem;
+}
+
+.product-details h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.product-details ul {
+    list-style: none;
+}
+
+.product-details li {
+    margin-bottom: 0.5rem;
+}
+
+.product-reviews {
+    margin-top: 2rem;
+}
+
+.product-reviews h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-reviews ul {
+    list-style: none;
+}
+
+.product-reviews li {
+    margin-bottom: 0.5rem;
+}
+
+#color-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.3125rem;
+}
+
+.color-option {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.25rem;
+    margin-right: 0.75rem;
+    cursor: pointer;
+}
+
+.color-option:hover:not(:focus) {
+    border: 3px solid #8B8682;
+}
+
+.color-option:focus {
+    outline: 3px solid #8B8682;
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.color-option:focus-visible {
+    outline: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 3rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 34rem;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 43.75rem;
+    text-align: center;
+    color: #ccc;
+    padding: 0.625rem 0;
+    height: 9.375rem;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}
